@@ -1,0 +1,20 @@
+{
+  "name": "exchange-rates",
+  "version": "1.0.0",
+  "description": "Exchange rates: API basics ",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server -c-1 -o ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JLannoo/exchange-rates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JLannoo/exchange-rates/issues"
+  },
+  "homepage": "https://github.com/JLannoo/exchange-rates#readme",
+  "dependencies": {}
+}
