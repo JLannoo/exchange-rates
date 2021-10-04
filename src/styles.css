@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.h1{
+    font-family: montserrat;
+}
+
+b{
+    font-family: montserrat;
+}
+
+.btn{
+    font-family: montserrat;
+}
+
+#list{
+    font-family: montserrat;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5%;
+
+    border-radius: 5%;
+
+    width: 50%;
+}
+
+#listContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+#selectContainer{
+    padding: 5%;
+}
