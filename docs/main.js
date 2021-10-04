@@ -24,7 +24,7 @@ async function fillList(){
     const data = await response.json()
     
     $list.innerHTML = "";
-    $selectContainer.innerHTML = "";
+    $coinSelect.innerHTML = "";
 
     for(r in data.conversion_rates){
         const li = document.createElement("li");
