@@ -13,9 +13,6 @@ const $coinSelect = document.querySelector("#coin");
         option.innerHTML = code[0] + " - " + code[1];
         $currencySelect.appendChild(option);
     }
-
-
-    console.log(codes)
 })().catch(e => console.log(e));
 
 async function fillList(){
@@ -27,6 +24,7 @@ async function fillList(){
     const data = await response.json()
     
     $list.innerHTML = "";
+    $selectContainer.innerHTML = "";
 
     for(r in data.conversion_rates){
         const li = document.createElement("li");
