@@ -16,11 +16,14 @@
         <span class="material-icons-outlined" style="font-size: 50px;">paid</span>
         <h1>Exchange Rates</h1>
     
-        <label for="currencyType">Select base currency</label>
-        <select name="currencyType" id="currencyType" class="form-select"></select>
+        <label for="baseCurrency">Select base currency</label>
+        <select name="baseCurrency" id="baseCurrency" class="form-select"></select>
+
+        <label for="date">Select a date</label>
+        <input type="date" name="date" id="date" min="1999-01-01">
 
         <br>
-        <input class="btn btn-dark"type="button" value="Search" onclick=fillList()>
+        <input class="btn btn-dark"type="button" value="Search" onclick=executeFillList()>
     </div>
     
     <div class="container" id="exchangeContainer">
@@ -32,7 +35,7 @@
             </div>
             <div class="col-2">
                 <div class="hidden " id="selectContainer">
-                    <select name="coin" id="coin" class="form-select"></select>
+                    <select name="findCurrency" id="findCurrency" class="form-select"></select>
                     <input class="btn btn-dark"type="button" value="Find" onclick=findCoin()>
                 </div>
             </div>
