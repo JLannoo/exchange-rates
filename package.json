@@ -4,7 +4,7 @@
   "description": "Exchange rates: API basics ",
   "main": "index.js",
   "scripts": {
-    "server": "http-server -c-1 -o ./src"
+    "server": "http-server -c-1 -o"
   },
   "repository": {
     "type": "git",

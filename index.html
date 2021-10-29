@@ -23,10 +23,10 @@
         <input type="date" name="date" id="date" min="1999-01-01">
 
         <br>
-        <input class="btn btn-dark"type="button" value="Search" onclick=executeFillList()>
+        <input class="btn btn-dark"type="button" value="Search" id="search-button">
     </div>
     
-    <div class="container" id="exchangeContainer">
+    <div class="container hidden" id="exchangeContainer">
         <div class="row align-items-start justify-content-center">
             <div class="col-4">
                 <div class="container" id="listContainer">
@@ -34,14 +34,20 @@
                 </div>
             </div>
             <div class="col-2">
-                <div class="hidden " id="selectContainer">
+                <div id="selectContainer">
                     <select name="findCurrency" id="findCurrency" class="form-select"></select>
-                    <input class="btn btn-dark"type="button" value="Find" onclick=findCoin()>
+                    <input class="btn btn-dark" type="button" value="Find" id="findCurrency-button">
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="docs/main.js"></script>
-</body>
+    <div id="backToTop" class="hidden">
+        <span class="material-icons-outlined">
+            arrow_circle_up
+        </span>
+    </div>
+
+    <script src="/docs/index.js" type="module"></script>
+</body> 
 </html>
