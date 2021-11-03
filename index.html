@@ -23,7 +23,7 @@
         <input type="date" name="date" id="date" min="1999-01-01">
 
         <br>
-        <input class="btn btn-dark"type="button" value="Search" id="search-button">
+        <input class="btn btn-dark" type="button" value="Search" id="search-button">
     </div>
     
     <div class="container hidden" id="exchangeContainer">
@@ -34,9 +34,15 @@
                 </div>
             </div>
             <div class="col-2">
-                <div id="selectContainer">
-                    <select name="findCurrency" id="findCurrency" class="form-select"></select>
-                    <input class="btn btn-dark" type="button" value="Find" id="findCurrency-button">
+                <div>
+                    <div id="amountContainer">
+                        <label for="amount" >Amount to convert</label>
+                        <input type="number" name="amount" id="exchangeAmount" class="form-control" min=1 value=1>
+                    </div>
+                    <div id="selectContainer">
+                        <select name="findCurrency" id="findCurrency" class="form-select"></select>
+                        <input class="btn btn-dark" type="button" value="Find" id="findCurrency-button">
+                    </div>
                 </div>
             </div>
         </div>

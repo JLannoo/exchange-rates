@@ -1,10 +1,11 @@
-import {setDate, setBaseCurrencySymbols, setButtonOnClick, fillList, findCoin, errorFetchingData, addScrollEvent, backToTop} from './ui.js';
+import {setDate, setBaseCurrencySymbols, setButtonOnClick, setFieldOnChange, fillList, findCoin, errorFetchingData, addScrollEvent, backToTop} from './ui.js';
 import {getSymbols} from './exhanges.js';
 
-export async function executeFillList(){
-    fillList().catch(e => {
+export function executeFillList(){
+    const $amount = document.querySelector("#exchangeAmount");
+    fillList($amount.value).catch(e => {
         console.log(e);
-        $list.innerHTML = "An error has ocurred please try again later..."
+        errorFetchingData();
     })
 }
 
@@ -13,18 +14,16 @@ async function initialize(){
     setDate();
 
     const $search = document.querySelector("#search-button");
-    setButtonOnClick($search, ()=>{
-        fillList().catch(e => {
-            console.log(e)
-            errorFetchingData();
-        });
-    })
+    setButtonOnClick($search, executeFillList)
 
     const $findCurrencyButton = document.querySelector("#findCurrency-button");
     setButtonOnClick($findCurrencyButton, findCoin)
 
     const $backToTopButton = document.querySelector("#backToTop");
     setButtonOnClick($backToTopButton, backToTop)
+
+    const $amount = document.querySelector("#exchangeAmount");
+    setFieldOnChange($amount, executeFillList)
 
     addScrollEvent()
 }

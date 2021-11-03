@@ -21,7 +21,7 @@ export async function setBaseCurrencySymbols(data){
     }
 }
 
-export async function fillList(){
+export async function fillList(amount= amount?amount:1){
     showLoading();
 
     const data = await getExchangeData(getInputData());
@@ -35,7 +35,7 @@ export async function fillList(){
 
     for(let r in data.rates){
         const li = document.createElement("li");
-        li.innerHTML = `<strong>${r}</strong>: <span>${data.rates[r]}</span>`
+        li.innerHTML = `<strong>${r}</strong>: <span>${(data.rates[r]*amount).toFixed(2)}</span>`
         li.classList = "list-group-item";
         li.id = r;
         
@@ -101,6 +101,10 @@ export function errorFetchingData(){
 
 export function setButtonOnClick(button, func){
     button.onclick = () => func();
+}
+
+export function setFieldOnChange(field, func){
+    field.onchange = () => func();
 }
 
 function formatDate(date){
